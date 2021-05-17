@@ -1,0 +1,2 @@
+demo_action_cpp:demo_action_python:demo_cpp:demo_custom_msg:demo_launch:demo_python:demo_service_cpp:demo_service_python
+-DCATKIN_DEVEL_PREFIX=/home/ammmy/Desktop/tutorial_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ammmy/Desktop/tutorial_ws/install -G Unix Makefiles
