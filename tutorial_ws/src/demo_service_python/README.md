@@ -1,7 +1,6 @@
-#Generating new custom msg types
+# Generating new custom msg types
 
-
-##Instructions: 
+## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
 2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp`)
@@ -56,7 +55,7 @@ generate_messages(
 7. Now, Build and Compile the Package `catkin_make`
 
 
-##Precautions: 
+## Precautions: 
 
 1. Before creating package add source.bash file path in ~/.bashrc file and then restart your terminal. E.g: (`echo "source ~/Desktop/tutorial_ws/devel/setup.bash" >> ~/.bashrc`)
 2. You needs to run `catkin_make` every time you make change in your code.
