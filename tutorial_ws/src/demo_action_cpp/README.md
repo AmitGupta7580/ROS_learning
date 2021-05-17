@@ -1,4 +1,4 @@
-# Generating new custom msg types
+# Implementing ROS actions in C++
 
 
 ## Explaining Code:
@@ -62,7 +62,7 @@ void feedbackCb(const demo_action_cpp::demo_actionFeedbackConstPtr& feedback) {
 ## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
-2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp actionlib`)
+2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_action_cpp actionlib_msgs std_msgs roscpp actionlib`)
 3. Build Package (`catkin_make`).
 4. Create a folder `action` and put all of your action file inside it. Extension of file is `.action`
 
