@@ -1,7 +1,39 @@
-#Generating new custom msg types
+# Generating new custom msg types
 
+## Code:
 
-##Instructions: 
+### Server
+```C++
+#include "demo_service_cpp/simple_srv.h"
+
+bool callback(demo_service_cpp::simple_srv::Request &req, demo_service_cpp::simple_srv::Response &res) {
+	std::stringstream ss;
+	ss << "Received Here";
+	res.out = ss.str();
+	ROS_INFO("From Client [%s], Server says [%s]",req.in.c_str(),res.out.c_str());
+	return true;
+}
+
+ros::init(argc, argv, "server");
+ros::NodeHandle n;
+ros::ServiceServer service = n.advertiseService("demo_service", callback);
+ROS_INFO("Ready to receive from client.");
+```
+
+### Client
+```C++
+ros::init(argc, argv, "client");
+ros::NodeHandle n;
+ros::Rate loop_rate(10);
+ros::ServiceClient client = n.serviceClient<demo_service_cpp::simple_srv>("demo_service");
+
+demo_service_cpp::simple_srv srv;
+std::stringstream ss;
+ss << "Sending from Here";
+srv.request.in = ss.str();
+```
+
+## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
 2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp`)
@@ -84,7 +116,7 @@ Uncomment :
 7. Now, Build and Compile the Package `catkin_make`
 
 
-##Precautions: 
+## Precautions: 
 
 1. Before creating package add source.bash file path in ~/.bashrc file and then restart your terminal. E.g: (`echo "source ~/Desktop/tutorial_ws/devel/setup.bash" >> ~/.bashrc`)
 2. You needs to run `catkin_make` every time you make change in your code.
