@@ -1,9 +1,9 @@
-#Generating new custom msg types
+# Implementing ROS actions in python
 
 
-##Explaining Code:
+## Explaining Code:
 
-###Server:
+### Server:
 
 1. First initialize a node with its unique name. `rospy.init_node('python_server')`.
 2. Then create a Simple action server by including action name and callbacks.
@@ -35,7 +35,7 @@ class SimpleServer(object):
 
 ```
 
-###Client:
+### Client:
 1. First initialize a node with its unique name. `rospy.init_node('python_client')`.
 2. Then create a Simple action client by including action name. 
 `client = actionlib.SimpleActionClient('python_action', demo_action_python.msg.python_actionAction)`
@@ -57,10 +57,10 @@ def feedbackCb(feedback):
 ```
 
 
-##Instructions: 
+## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
-2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp actionlib`)
+2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_action_python rospy std_msgs rospy actionlib_msgs actionlib`)
 3. Build Package (`catkin_make`).
 4. Create a folder `action` and put all of your action file inside it. Extension of file is `.action`
 
@@ -122,7 +122,7 @@ Uncomment :
 7. Now, Build and Compile the Package `catkin_make`
 
 
-##Precautions: 
+## Precautions: 
 
 1. Before creating package add source.bash file path in ~/.bashrc file and then restart your terminal. E.g: (`echo "source ~/Desktop/tutorial_ws/devel/setup.bash" >> ~/.bashrc`)
 2. You needs to run `catkin_make` every time you make change in your code.
