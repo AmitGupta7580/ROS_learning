@@ -1,9 +1,9 @@
-#Generating new custom msg types
+# Generating new custom msg types
 
 
-##Explaining Code:
+## Explaining Code:
 
-###Server:
+### Server:
 
 1. First initialize a node with its unique name. `ros::init(argc, argv, "server_action")`.
 2. Then create a Simple action server by including action name and callbacks.
@@ -34,7 +34,7 @@ void executeCB(const demo_action_cpp::demo_actionGoalConstPtr &goal){
 }
 ```
 
-###Client:
+### Client:
 1. First initialize a node with its unique name. `ros::init(argc, argv, "client")`.
 2. Then create a Simple action client by including action name. 
 `actionlib::SimpleActionClient<demo_action_cpp::demo_actionAction> client("demo_action", true);`
@@ -59,7 +59,7 @@ void feedbackCb(const demo_action_cpp::demo_actionFeedbackConstPtr& feedback) {
 ```
 
 
-##Instructions: 
+## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
 2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp actionlib`)
@@ -144,7 +144,7 @@ Uncomment :
 7. Now, Build and Compile the Package `catkin_make`
 
 
-##Precautions: 
+## Precautions: 
 
 1. Before creating package add source.bash file path in ~/.bashrc file and then restart your terminal. E.g: (`echo "source ~/Desktop/tutorial_ws/devel/setup.bash" >> ~/.bashrc`)
 2. You needs to run `catkin_make` every time you make change in your code.
