@@ -1,4 +1,4 @@
-# Generating new custom msg types
+# Implementing ROS services in C++
 
 ## Code:
 
@@ -36,7 +36,7 @@ srv.request.in = ss.str();
 ## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
-2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp`)
+2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_service_cpp actionlib std_msgs roscpp`)
 3. Build Package (`catkin_make`).
 4. Create a folder `srv` and put all of your service file inside it. Extension of file is `.srv`
 
