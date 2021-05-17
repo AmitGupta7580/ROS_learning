@@ -1,13 +1,28 @@
-#Generating new custom msg types
+# Generating new custom msg types
 
+## Code:
 
-##Instructions: 
+```python
+from demo_custom_msg.msg import custom_msg
+
+msg = custom_msg()
+msg.name = 'Hello World'
+msg.number = 10
+```
+
+## Instructions: 
 
 1. Navigate to the src folder of workspace. E.g: (`cd ~/Desktop/tutorial_ws`) 
 2. Create Package (`catkin_create_pkg <PACKAGE_NAME> <DEP_1> <DEP_2>`). E.g: (`catkin_create_pkg demo_cpp rospy std_msgs roscpp`)
 3. Build Package (`catkin_make`).
 4. Create a folder `msg` and put all of your custom msg file inside it. Extension of file is `.msg`
-5. After writting all msg files. You needs to make some changes in `CMakeLists.txt` file and `Package.xml`.
+```
+File Format
+
+string name
+int32 number
+```
+6. After writting all msg files. You needs to make some changes in `CMakeLists.txt` file and `Package.xml`.
 
 ```
 
@@ -52,7 +67,7 @@ Uncomment :
 7. Now, Build and Compile the Package `catkin_make`
 
 
-##Precautions: 
+## Precautions: 
 
 1. Before creating package add source.bash file path in ~/.bashrc file and then restart your terminal. E.g: (`echo "source ~/Desktop/tutorial_ws/devel/setup.bash" >> ~/.bashrc`)
 2. You needs to run `catkin_make` every time you make change in your code.
