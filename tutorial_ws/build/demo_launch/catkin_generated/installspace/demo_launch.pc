@@ -1,8 +1,0 @@
-prefix=/home/ammmy/Desktop/tutorial_ws/install
-
-Name: demo_launch
-Description: Description of demo_launch
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

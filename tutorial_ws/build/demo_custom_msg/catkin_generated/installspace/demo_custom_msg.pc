@@ -1,8 +1,0 @@
-prefix=/home/ammmy/Desktop/tutorial_ws/install
-
-Name: demo_custom_msg
-Description: Description of demo_custom_msg
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

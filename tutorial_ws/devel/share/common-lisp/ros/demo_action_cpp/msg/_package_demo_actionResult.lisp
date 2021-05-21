@@ -1,4 +1,0 @@
-(cl:in-package demo_action_cpp-msg)
-(cl:export '(FINAL_COUNT-VAL
-          FINAL_COUNT
-))
